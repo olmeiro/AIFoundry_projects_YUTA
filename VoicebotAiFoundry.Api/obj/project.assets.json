@@ -579,7 +579,6 @@
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "VoicebotAiFoundry.Domain": "1.0.0",
-          "VoicebotAiFoundry.Infrastructure": "1.0.0",
           "VoicebotAiFoundry.Shared": "1.0.0"
         },
         "compile": {

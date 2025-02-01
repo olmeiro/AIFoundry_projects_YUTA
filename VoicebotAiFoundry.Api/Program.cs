@@ -11,11 +11,15 @@ using VoicebotAiFoundry.Shared.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 🔹 Cargar configuración desde appsettings.json
+// Cargar configuración desde appsettings.json
 builder.Services.Configure<AzureOpenAIOptions>(builder.Configuration.GetSection("AzureOpenAI"));
 
-// 🔹 Registrar el servicio de OpenAI
+// Registrar servicios generales
 builder.Services.AddHttpClient<AzureOpenAIService>();
+
+builder.Services.AddScoped<IVoicebotService, VoicebotService>();
+builder.Services.AddScoped<ITuyaHelpService, TuyaHelpService>();
+builder.Services.AddScoped<ITuyaDemandasService, TuyaDemandasService>();
 
 // Configurar dependencias
 builder.Services.AddHttpClient();
@@ -41,8 +45,25 @@ app.MapPost("/messages", async ([FromBody] MessageRequest request, IMessageServi
 {
     var response = await messageService.GenerateResponseAsync(new Message(request.Message));
     return Results.Ok(new { response });
-})
-.WithName("SendMessage");
+}).WithName("SendMessage_General");
+
+app.MapPost("/voicebot/messages", async ([FromBody] MessageRequest request, IVoicebotService service) =>
+{
+    var response = await service.GenerateResponseAsync(new Message(request.Message));
+    return Results.Ok(new { response });
+}).WithName("SendMessage_Voicebot");
+
+app.MapPost("/tuyahelp", async ([FromBody] TuyaHelpRequest request, ITuyaHelpService service) =>
+{
+    var response = await service.ProcessHelpRequest(request);
+    return Results.Ok(new { response });
+}).WithName("SendMessage_TuyaHelp");
+
+app.MapPost("/demandas", async ([FromBody] DemandasRequest request, ITuyaDemandasService service) =>
+{
+    var response = await service.ProcessDemandRequest(request);
+    return Results.Ok(new { response });
+}).WithName("SendMessage_Demandas");
 
 
 await app.RunAsync();

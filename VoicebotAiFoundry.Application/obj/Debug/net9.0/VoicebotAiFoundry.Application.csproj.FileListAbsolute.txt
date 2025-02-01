@@ -2,11 +2,9 @@ C:\Users\OlmeiroOrozcoOrtiz\Downloads\CODIGOS\AiFoundry\VoicebotAiFoundry\Voiceb
 C:\Users\OlmeiroOrozcoOrtiz\Downloads\CODIGOS\AiFoundry\VoicebotAiFoundry\VoicebotAiFoundry.Application\bin\Debug\net9.0\VoicebotAiFoundry.Application.dll
 C:\Users\OlmeiroOrozcoOrtiz\Downloads\CODIGOS\AiFoundry\VoicebotAiFoundry\VoicebotAiFoundry.Application\bin\Debug\net9.0\VoicebotAiFoundry.Application.pdb
 C:\Users\OlmeiroOrozcoOrtiz\Downloads\CODIGOS\AiFoundry\VoicebotAiFoundry\VoicebotAiFoundry.Application\bin\Debug\net9.0\VoicebotAiFoundry.Domain.dll
-C:\Users\OlmeiroOrozcoOrtiz\Downloads\CODIGOS\AiFoundry\VoicebotAiFoundry\VoicebotAiFoundry.Application\bin\Debug\net9.0\VoicebotAiFoundry.Infrastructure.dll
 C:\Users\OlmeiroOrozcoOrtiz\Downloads\CODIGOS\AiFoundry\VoicebotAiFoundry\VoicebotAiFoundry.Application\bin\Debug\net9.0\VoicebotAiFoundry.Shared.dll
 C:\Users\OlmeiroOrozcoOrtiz\Downloads\CODIGOS\AiFoundry\VoicebotAiFoundry\VoicebotAiFoundry.Application\bin\Debug\net9.0\VoicebotAiFoundry.Domain.pdb
 C:\Users\OlmeiroOrozcoOrtiz\Downloads\CODIGOS\AiFoundry\VoicebotAiFoundry\VoicebotAiFoundry.Application\bin\Debug\net9.0\VoicebotAiFoundry.Shared.pdb
-C:\Users\OlmeiroOrozcoOrtiz\Downloads\CODIGOS\AiFoundry\VoicebotAiFoundry\VoicebotAiFoundry.Application\bin\Debug\net9.0\VoicebotAiFoundry.Infrastructure.pdb
 C:\Users\OlmeiroOrozcoOrtiz\Downloads\CODIGOS\AiFoundry\VoicebotAiFoundry\VoicebotAiFoundry.Application\obj\Debug\net9.0\VoicebotAiFoundry.Application.csproj.AssemblyReference.cache
 C:\Users\OlmeiroOrozcoOrtiz\Downloads\CODIGOS\AiFoundry\VoicebotAiFoundry\VoicebotAiFoundry.Application\obj\Debug\net9.0\VoicebotAiFoundry.Application.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\OlmeiroOrozcoOrtiz\Downloads\CODIGOS\AiFoundry\VoicebotAiFoundry\VoicebotAiFoundry.Application\obj\Debug\net9.0\VoicebotAiFoundry.Application.AssemblyInfoInputs.cache

@@ -3,7 +3,6 @@
   <ItemGroup>
     <ProjectReference Include="..\VoicebotAiFoundry.Domain\VoicebotAiFoundry.Domain.csproj" />
     <ProjectReference Include="..\VoicebotAiFoundry.Shared\VoicebotAiFoundry.Shared.csproj" />
-    <ProjectReference Include="..\VoicebotAiFoundry.Infrastructure\VoicebotAiFoundry.Infrastructure.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
