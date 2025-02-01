@@ -1,4 +1,5 @@
-using VoicebotAiFoundry.Shared.Interfaces;
+
+using VoicebotAiFoundry.Application.Interfaces;
 using VoicebotAiFoundry.Shared.Configuration;
 using VoicebotAiFoundry.Domain.Entities;
 using Azure;
@@ -33,14 +34,14 @@ namespace VoicebotAiFoundry.Infrastructure.Services
             _deploymentId = settings.DeploymentId;
         }
 
-        public async Task<string> GenerateResponseAsync(MessageRequest message)
+        public async Task<string> GenerateResponseAsync(Message message)
         {
-            _logger.LogInformation("Generando respuesta para: {Message}", message);
+            _logger.LogInformation("Generando respuesta para: {Message}", message.Content);
 
             var chatHistory = new List<ChatMessage>
             {
                 ChatMessage.CreateSystemMessage("Eres un asistente util"),
-                ChatMessage.CreateUserMessage(message.Message)
+                ChatMessage.CreateUserMessage(message.Content)
             };
 
             var chatRequestOptions = new ChatCompletionOptions()

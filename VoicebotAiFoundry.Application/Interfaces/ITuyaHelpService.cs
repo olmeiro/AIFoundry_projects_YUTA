@@ -1,10 +1,10 @@
 using VoicebotAiFoundry.Domain.Entities;
 using System.Threading.Tasks;
 
-namespace VoicebotAiFoundry.Shared.Interfaces
+namespace VoicebotAiFoundry.Application.Interfaces
 {
     public interface ITuyaHelpService
     {
-        Task<string> ProcessHelpRequest(TuyaHelpRequest request);
+        Task<string> ProcessHelpRequest(Message request);
     }
 }

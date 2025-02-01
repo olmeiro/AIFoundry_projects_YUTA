@@ -1,9 +1,9 @@
 using VoicebotAiFoundry.Domain.Entities;
 using System.Threading.Tasks;
 
-namespace VoicebotAiFoundry.Shared.Interfaces
+namespace VoicebotAiFoundry.Application.Interfaces
 {
-    public interface IVoicebotService
+    public interface IMessageService
     {
         Task<string> GenerateResponseAsync(Message message);
     }

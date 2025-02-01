@@ -317,7 +317,7 @@
           "Azure.Identity": "1.13.2",
           "Microsoft.Extensions.Logging.Abstractions": "9.0.1",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "9.0.1",
-          "VoicebotAiFoundry.Shared": "1.0.0"
+          "VoicebotAiFoundry.Application": "1.0.0"
         },
         "runtime": {
           "VoicebotAiFoundry.Infrastructure.dll": {

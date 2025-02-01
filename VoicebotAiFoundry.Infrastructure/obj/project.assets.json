@@ -465,6 +465,20 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+      "VoicebotAiFoundry.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "VoicebotAiFoundry.Domain": "1.0.0",
+          "VoicebotAiFoundry.Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/VoicebotAiFoundry.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VoicebotAiFoundry.Application.dll": {}
+        }
+      },
       "VoicebotAiFoundry.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -1273,6 +1287,11 @@
         "version.txt"
       ]
     },
+    "VoicebotAiFoundry.Application/1.0.0": {
+      "type": "project",
+      "path": "../VoicebotAiFoundry.Application/VoicebotAiFoundry.Application.csproj",
+      "msbuildProject": "../VoicebotAiFoundry.Application/VoicebotAiFoundry.Application.csproj"
+    },
     "VoicebotAiFoundry.Domain/1.0.0": {
       "type": "project",
       "path": "../VoicebotAiFoundry.Domain/VoicebotAiFoundry.Domain.csproj",
@@ -1291,7 +1310,7 @@
       "Azure.Identity >= 1.13.2",
       "Microsoft.Extensions.Logging.Abstractions >= 9.0.1",
       "Microsoft.Extensions.Options.ConfigurationExtensions >= 9.0.1",
-      "VoicebotAiFoundry.Shared >= 1.0.0"
+      "VoicebotAiFoundry.Application >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1326,8 +1345,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\OlmeiroOrozcoOrtiz\\Downloads\\CODIGOS\\AiFoundry\\VoicebotAiFoundry\\VoicebotAiFoundry.Shared\\VoicebotAiFoundry.Shared.csproj": {
-              "projectPath": "C:\\Users\\OlmeiroOrozcoOrtiz\\Downloads\\CODIGOS\\AiFoundry\\VoicebotAiFoundry\\VoicebotAiFoundry.Shared\\VoicebotAiFoundry.Shared.csproj"
+            "C:\\Users\\OlmeiroOrozcoOrtiz\\Downloads\\CODIGOS\\AiFoundry\\VoicebotAiFoundry\\VoicebotAiFoundry.Application\\VoicebotAiFoundry.Application.csproj": {
+              "projectPath": "C:\\Users\\OlmeiroOrozcoOrtiz\\Downloads\\CODIGOS\\AiFoundry\\VoicebotAiFoundry\\VoicebotAiFoundry.Application\\VoicebotAiFoundry.Application.csproj"
             }
           }
         }

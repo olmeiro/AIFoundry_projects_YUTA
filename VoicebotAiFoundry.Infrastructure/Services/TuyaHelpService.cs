@@ -1,5 +1,5 @@
 using VoicebotAiFoundry.Domain.Entities;
-using VoicebotAiFoundry.Shared.Interfaces;
+using VoicebotAiFoundry.Application.Interfaces;
 using System.Threading.Tasks;
 
 namespace VoicebotAiFoundry.Infrastructure.Services
@@ -13,9 +13,9 @@ namespace VoicebotAiFoundry.Infrastructure.Services
             _azureOpenAIService = azureOpenAIService;
         }
 
-        public async Task<string> ProcessHelpRequest(TuyaHelpRequest request)
+        public async Task<string> ProcessHelpRequest(Message request)
         {
-            return await _azureOpenAIService.GenerateResponseAsync(new MessageRequest { Message = request.Query });
+            return await _azureOpenAIService.GenerateResponseAsync(request);
         }
     }
 }

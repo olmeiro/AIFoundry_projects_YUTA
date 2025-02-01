@@ -264,8 +264,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\OlmeiroOrozcoOrtiz\\Downloads\\CODIGOS\\AiFoundry\\VoicebotAiFoundry\\VoicebotAiFoundry.Shared\\VoicebotAiFoundry.Shared.csproj": {
-                "projectPath": "C:\\Users\\OlmeiroOrozcoOrtiz\\Downloads\\CODIGOS\\AiFoundry\\VoicebotAiFoundry\\VoicebotAiFoundry.Shared\\VoicebotAiFoundry.Shared.csproj"
+              "C:\\Users\\OlmeiroOrozcoOrtiz\\Downloads\\CODIGOS\\AiFoundry\\VoicebotAiFoundry\\VoicebotAiFoundry.Application\\VoicebotAiFoundry.Application.csproj": {
+                "projectPath": "C:\\Users\\OlmeiroOrozcoOrtiz\\Downloads\\CODIGOS\\AiFoundry\\VoicebotAiFoundry\\VoicebotAiFoundry.Application\\VoicebotAiFoundry.Application.csproj"
               }
             }
           }

@@ -2,10 +2,10 @@ using System.Threading.Tasks;
 using VoicebotAiFoundry.Domain.Entities;
 
 
-namespace VoicebotAiFoundry.Shared.Interfaces
+namespace VoicebotAiFoundry.Application.Interfaces
 {
     public interface IAzureOpenAIService
     {
-        Task<string> GenerateResponseAsync(MessageRequest message);
+        Task<string> GenerateResponseAsync(Message message);
     }
 }
