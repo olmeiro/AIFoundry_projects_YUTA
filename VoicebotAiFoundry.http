@@ -1,0 +1,6 @@
+@VoicebotAiFoundry_HostAddress = http://localhost:5232
+
+GET {{VoicebotAiFoundry_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
