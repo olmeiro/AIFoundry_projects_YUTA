@@ -1,0 +1,70 @@
+openapi: 3.0.3
+info:
+  title: Kernel IA-Gen
+  version: "1.1"
+
+servers:
+  - url: https://xyz.com.co/kernel
+    description: Servidor de producción
+  - url: https://xyz1.com.co/kernel
+    description: Servidor de certificación
+  - url: https://xyz2.com.co/kernel
+    description: Servidor de desarrollo
+
+paths:
+  /chat:
+    post:
+      summary: Recurso para interacciones conversacionales
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/chatResponse'
+        '400':
+          description: Missing required information
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '#/components/schemas/chatRequest'
+
+components:
+  schemas:
+    chatResponse:
+      type: object
+      required:
+        - text
+        - command
+      properties:
+        text:
+          type: string
+        command:
+          enum:
+            - REPLY_TO_USER
+            - TRANSFER_TO_HUMAN
+            - END_CONVERSATION
+    chatRequest:
+      type: object
+      required:
+        - text
+        - channel
+        - skill
+      properties:
+        text:
+          type: string
+        channel:
+          enum:
+            - VOICE
+            - CHAT
+        skill:
+          enum:
+            - STATEMENTS
+        documentNumber:
+          type: string
+        documentType:
+          enum:
+            - CC
+            - CE
