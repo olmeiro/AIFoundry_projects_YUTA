@@ -40,21 +40,21 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapPost("/voicebot/messages", async ([FromBody] MessageRequest request, IVoicebotService service) =>
+app.MapPost("/voicebot/messages", async ([FromBody] ChatRequest request, IVoicebotService service) =>
 {
-    var response = await service.GenerateResponseAsync(new Message(request.Message));
+    var response = await service.GenerateResponseAsync(request);
     return Results.Ok(new { response });
 }).WithName("SendMessage_Voicebot");
 
-app.MapPost("/tuyahelp", async ([FromBody] MessageRequest request, ITuyaHelpService service) =>
+app.MapPost("/tuyahelp", async ([FromBody] ChatRequest request, ITuyaHelpService service) =>
 {
-    var response = await service.ProcessHelpRequest(new Message(request.Message));
+    var response = await service.ProcessHelpRequest(request);
     return Results.Ok(new { response });
 }).WithName("SendMessage_TuyaHelp");
 
-app.MapPost("/demandas", async ([FromBody] MessageRequest request, ITuyaDemandasService service) =>
+app.MapPost("/demandas", async ([FromBody] ChatRequest request, ITuyaDemandasService service) =>
 {
-    var response = await service.ProcessDemandRequest(new Message(request.Message));
+    var response = await service.ProcessDemandRequest(request);
     return Results.Ok(new { response });
 }).WithName("SendMessage_Demandas");
 

@@ -6,6 +6,6 @@ namespace VoicebotAiFoundry.Application.Interfaces
 {
     public interface IAzureOpenAIService
     {
-        Task<string> GenerateResponseAsync(Message message);
+        Task<string> GenerateResponseAsync(ChatRequest chatRequest);
     }
 }

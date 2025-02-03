@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VoicebotAiFoundry.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce8060f738e5eb42cb98d77f5d6eeb0382bac7dd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40414380953c30b82f3714a6921ff793e4474242")]
 [assembly: System.Reflection.AssemblyProductAttribute("VoicebotAiFoundry.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VoicebotAiFoundry.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

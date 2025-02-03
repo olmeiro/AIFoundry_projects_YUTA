@@ -34,14 +34,15 @@ namespace VoicebotAiFoundry.Infrastructure.Services
             _deploymentId = settings.DeploymentId;
         }
 
-        public async Task<string> GenerateResponseAsync(Message message)
+        public async Task<string> GenerateResponseAsync(ChatRequest request)
         {
-            _logger.LogInformation("Generando respuesta para: {Message}", message.Content);
+            _logger.LogInformation("Procesando solicitud para canal: {Channel}, Documento: {DocumentNumber}, Tipo: {DocumentType}",
+                request.Channel, request.DocumentNumber ?? "N/A", request.DocumentType ?? "N/A");
 
             var chatHistory = new List<ChatMessage>
             {
                 ChatMessage.CreateSystemMessage("Eres un asistente util"),
-                ChatMessage.CreateUserMessage(message.Content)
+                ChatMessage.CreateUserMessage(request.Message)
             };
 
             var chatRequestOptions = new ChatCompletionOptions()

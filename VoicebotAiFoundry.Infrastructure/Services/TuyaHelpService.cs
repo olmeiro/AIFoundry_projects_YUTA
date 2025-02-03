@@ -13,9 +13,19 @@ namespace VoicebotAiFoundry.Infrastructure.Services
             _azureOpenAIService = azureOpenAIService;
         }
 
-        public async Task<string> ProcessHelpRequest(Message request)
+        public async Task<string> ProcessHelpRequest(ChatRequest request)
         {
-            return await _azureOpenAIService.GenerateResponseAsync(request);
+
+            var chatRequest = new ChatRequest
+            (
+                Message: request.Message,  // Asigna el texto del mensaje
+                channel: request.Channel,       // Especifica el canal como "VOICE"
+                Skill : request.Skill,
+                documentNumber: request.DocumentNumber,   // Opcional, si tienes un número de documento
+                documentType: request.DocumentType      // Opcional, si tienes un tipo de documento
+            );
+
+            return await _azureOpenAIService.GenerateResponseAsync(chatRequest);
         }
     }
 }

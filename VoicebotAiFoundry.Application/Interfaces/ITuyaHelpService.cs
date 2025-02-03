@@ -5,6 +5,6 @@ namespace VoicebotAiFoundry.Application.Interfaces
 {
     public interface ITuyaHelpService
     {
-        Task<string> ProcessHelpRequest(Message request);
+        Task<string> ProcessHelpRequest(ChatRequest request);
     }
 }

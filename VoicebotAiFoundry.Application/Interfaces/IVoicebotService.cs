@@ -5,6 +5,6 @@ namespace VoicebotAiFoundry.Application.Interfaces
 {
     public interface IVoicebotService
     {
-        Task<string> GenerateResponseAsync(Message message);
+        Task<string> GenerateResponseAsync(ChatRequest message);
     }
 }

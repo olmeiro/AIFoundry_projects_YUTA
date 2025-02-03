@@ -5,6 +5,6 @@ namespace VoicebotAiFoundry.Application.Interfaces
 {
     public interface ITuyaDemandasService
     {
-        Task<string> ProcessDemandRequest(Message request);
+        Task<string> ProcessDemandRequest(ChatRequest request);
     }
 }
