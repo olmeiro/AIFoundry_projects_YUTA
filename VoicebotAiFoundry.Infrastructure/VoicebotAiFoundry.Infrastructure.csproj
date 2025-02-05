@@ -2,17 +2,25 @@
 
   <ItemGroup>
     <ProjectReference Include="..\VoicebotAiFoundry.Application\VoicebotAiFoundry.Application.csproj" />
-</ItemGroup>
-
+  </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.3.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.1" />
-     <PackageReference Include="Azure.AI.OpenAI" Version="2.1.0" />
+    <PackageReference Include="Azure.AI.OpenAI" Version="2.1.0-beta.2" />
     <PackageReference Include="Azure.AI.Projects" Version="1.0.0-beta.3" />
     <PackageReference Include="Azure.Identity" Version="1.13.2" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="9.0.1" />
+    <PackageReference Include="Microsoft.SemanticKernel" Version="1.35.0" />
+    <PackageReference Include="Microsoft.SemanticKernel.Plugins.Core" Version="1.35.0-alpha" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Prompts\**\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>

@@ -1,0 +1,22 @@
+{
+    "schema": 1,
+    "type": "completion",
+    "description": "Provide concise and efficient responses for voice interactions.",
+    "execution_settings": {
+        "default": {
+            "max_tokens": 100,
+            "temperature": 0.2,
+            "top_p": 0.8,
+            "frequency_penalty": 0.0,
+            "presence_penalty": 0.0,
+            "stop_sequences": ["\n"]
+        }
+    },
+    "input_variables": [
+        {
+            "name": "input",
+            "description": "The user's voice request.",
+            "required": true
+        }
+    ]
+}

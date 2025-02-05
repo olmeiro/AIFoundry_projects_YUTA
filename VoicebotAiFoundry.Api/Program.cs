@@ -18,6 +18,7 @@ builder.Services.Configure<AzureOpenAIOptions>(builder.Configuration.GetSection(
 // Registrar servicios generales
 builder.Services.AddHttpClient<AzureOpenAIService>();
 
+builder.Services.AddScoped<ISemanticKernelService, SemanticKernelService>();
 builder.Services.AddScoped<IVoicebotService, VoicebotService>();
 builder.Services.AddScoped<ITuyaHelpService, TuyaHelpService>();
 builder.Services.AddScoped<ITuyaDemandasService, TuyaDemandasService>();
@@ -40,9 +41,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapPost("/voicebot/messages", async ([FromBody] ChatRequest request, IVoicebotService service) =>
+app.MapPost("/voicebot/messages", async ([FromBody] ChatRequest request, ISemanticKernelService service) =>
 {
-    var response = await service.GenerateResponseAsync(request);
+    var response = await service.ExecuteAgentAsync(request);
     return Results.Ok(new { response });
 }).WithName("SendMessage_Voicebot");
 

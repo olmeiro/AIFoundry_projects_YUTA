@@ -7,26 +7,18 @@ namespace VoicebotAiFoundry.Infrastructure.Services
 {
     public class VoicebotService : IVoicebotService
     {
-        private readonly IAzureOpenAIService _azureOpenAIService;
+        private readonly ISemanticKernelService _semanticKernelService;
 
-        public VoicebotService(IAzureOpenAIService azureOpenAIService)
+        public VoicebotService(
+            ISemanticKernelService semanticKernelService
+        )
         {
-            _azureOpenAIService = azureOpenAIService;
+            _semanticKernelService = semanticKernelService;
         }
 
         public async Task<string> GenerateResponseAsync(ChatRequest message)
         {
-
-            var chatRequest = new ChatRequest
-            (
-                Message: message.Message,  // Asigna el texto del mensaje
-                channel: message.Channel,       // Especifica el canal como "VOICE"
-                Skill : message.Skill,
-                documentNumber: message.DocumentNumber,   // Opcional, si tienes un número de documento
-                documentType: message.DocumentType      // Opcional, si tienes un tipo de documento
-            );
-
-            return await _azureOpenAIService.GenerateResponseAsync(chatRequest);
+            return await _semanticKernelService.ExecuteAgentAsync(message);
         }
     }
 }

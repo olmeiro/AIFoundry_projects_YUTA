@@ -288,7 +288,7 @@
           "dependencies": {
             "Azure.AI.OpenAI": {
               "target": "Package",
-              "version": "[2.1.0, )"
+              "version": "[2.1.0-beta.2, )"
             },
             "Azure.AI.Projects": {
               "target": "Package",
@@ -298,6 +298,10 @@
               "target": "Package",
               "version": "[1.13.2, )"
             },
+            "Microsoft.AspNetCore.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
             "Microsoft.Extensions.Logging.Abstractions": {
               "target": "Package",
               "version": "[9.0.1, )"
@@ -305,6 +309,14 @@
             "Microsoft.Extensions.Options.ConfigurationExtensions": {
               "target": "Package",
               "version": "[9.0.1, )"
+            },
+            "Microsoft.SemanticKernel": {
+              "target": "Package",
+              "version": "[1.35.0, )"
+            },
+            "Microsoft.SemanticKernel.Plugins.Core": {
+              "target": "Package",
+              "version": "[1.35.0-alpha, )"
             }
           },
           "imports": [
