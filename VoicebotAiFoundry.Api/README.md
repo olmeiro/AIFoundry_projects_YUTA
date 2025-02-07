@@ -44,3 +44,9 @@ Body:
 // please give me helpful phrases in spanish.
 
 
+# Para estudiar Semantic Kernel:
+[Samples Azure AI Agents Semantic Kernel](https://github.com/microsoft/semantic-kernel/blob/main/dotnet/samples/GettingStartedWithAgents/README.md#azure-ai-agent)
+
+## OpenAI Assistant Agent
+
+[OpenAI Assistant Agent](https://microsoft.github.io/autogen/stable/user-guide/core-user-guide/cookbook/openai-assistant-agent.html)
