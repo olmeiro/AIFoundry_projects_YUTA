@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\VoicebotAiFoundry.Api.props" />
-</Project>
